@@ -1,0 +1,5 @@
+# Cloudflare Pages configuration for The Jazz Canon (static build).
+# Deploy is manual and owner-initiated — see docs/DEPLOY.md.
+name = "jazz-canon-fable"
+compatibility_date = "2026-07-01"
+pages_build_output_dir = "dist"

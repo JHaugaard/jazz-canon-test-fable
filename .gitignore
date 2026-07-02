@@ -1,2 +1,9 @@
 .DS_Store
 Thumbs.db
+
+# Jazz Canon build (Fable 5 run)
+node_modules/
+app/dist/
+
+# session-ephemeral working context
+.claude/session-context.md

@@ -1,0 +1,105 @@
+/* A Jazz Canon — global styles. Palette and type are the locked brand
+   constraint from style-guide.md; do not introduce colors outside it. */
+
+:root {
+  --bg: #faf8f3;
+  --surface: #ffffff;
+  --ink: #1c1a17;
+  --muted: #6b6358;
+  --line: #e6e0d6;
+
+  --bn-blue: #2b5f7a;
+  --bn-blue-light: #4a7c95;
+  --impulse-amber: #c4862a;
+
+  --era-cool: rgba(43, 95, 122, 0.18);
+  --era-hardbop: rgba(196, 134, 42, 0.18);
+  --era-modal: rgba(74, 124, 107, 0.18);
+  --era-postbop: rgba(122, 82, 140, 0.18);
+  --era-ink: #5a5249;
+
+  --font-display: 'Oswald', 'Helvetica Neue Condensed', sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+  overflow: hidden; /* the timeline owns scrolling */
+}
+
+#app { height: 100%; }
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+a { color: var(--bn-blue); }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* Epistemic treatments (BRIEF §3, style-guide §2).
+   obs = quiet default; inf/unk = amber family, differing by weight/marker. */
+.ep-inf { font-style: italic; color: var(--muted); }
+.ep-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 3px;
+  vertical-align: 1px;
+}
+.ep-badge.inf {
+  color: var(--impulse-amber);
+  border: 1px solid rgba(196, 134, 42, 0.45);
+  background: rgba(196, 134, 42, 0.08);
+}
+.ep-badge.unk {
+  color: #fff;
+  background: var(--impulse-amber);
+  font-weight: 700;
+}
+
+/* Editorial voice — serif italic + amber, never confusable with sourced rows */
+.editorial {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--ink);
+  background: rgba(196, 134, 42, 0.07);
+  border-left: 3px solid var(--impulse-amber);
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+}
+.editorial-label {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--impulse-amber);
+  display: block;
+  margin-bottom: 4px;
+}

@@ -7,3 +7,6 @@ app/dist/
 
 # session-ephemeral working context
 .claude/session-context.md
+
+# local secrets (Cloudflare deploy token) — never commit
+.env

@@ -10,3 +10,6 @@ app/dist/
 
 # local secrets (Cloudflare deploy token) — never commit
 .env
+
+# dashboard screenshots are for chat only, never commit
+screenshots/
